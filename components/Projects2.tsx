@@ -73,51 +73,39 @@ export default function Projects() {
   const project = projects[currentIndex]
 
   return (
-    <section id="projects" style={{ padding: '120px 24px', backgroundColor: '#0B0B0B', display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: '100%', maxWidth: '900px' }}>
+    <section id="projects" className="py-20 md:py-32 px-4 sm:px-6 bg-[#0B0B0B] flex justify-center">
+      <div className="w-full max-w-[900px]">
         {/* Section header - centered */}
         <motion.div
-          style={{ textAlign: 'center', marginBottom: '60px' }}
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <span style={{ color: '#C62828', letterSpacing: '0.3em', fontSize: '12px', fontFamily: 'monospace', display: 'block', marginBottom: '24px' }}>
+          <span className="text-[#C62828] tracking-[0.3em] text-xs font-mono block mb-6">
             PORTFOLIO
           </span>
-          <h2 style={{ fontSize: 'clamp(40px, 8vw, 72px)', fontWeight: 700, color: '#EAEAEA', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#EAEAEA] mb-6 font-heading">
             Selected Work
           </h2>
-          <p style={{ color: 'rgba(234,234,234,0.5)', fontSize: '18px', margin: '0 auto', fontFamily: 'Lexend Deca, sans-serif' }}>
+          <p className="text-[rgba(234,234,234,0.5)] text-base md:text-lg mx-auto font-body">
             Trading systems, AI automation, and full-stack applications built for performance and scale.
           </p>
         </motion.div>
 
         {/* Navigation arrows and project counter */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+        <div className="flex justify-between items-center mb-6 md:mb-8">
           <motion.button
             onClick={goToPrevious}
-            style={{
-              width: '56px',
-              height: '56px',
-              borderRadius: '50%',
-              border: '1px solid #2a2a2a',
-              backgroundColor: '#141414',
-              color: '#EAEAEA',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '24px',
-            }}
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#2a2a2a] bg-[#141414] text-[#EAEAEA] cursor-pointer flex items-center justify-center text-xl md:text-2xl"
             whileHover={{ scale: 1.1, borderColor: '#C62828', backgroundColor: '#1a1a1a' }}
             whileTap={{ scale: 0.95 }}
           >
             ←
           </motion.button>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div className="flex items-center gap-2 md:gap-3">
             {projects.map((_, idx) => (
               <motion.button
                 key={idx}
@@ -125,15 +113,9 @@ export default function Projects() {
                   setDirection(idx > currentIndex ? 1 : -1)
                   setCurrentIndex(idx)
                 }}
-                style={{
-                  width: idx === currentIndex ? '32px' : '10px',
-                  height: '10px',
-                  borderRadius: '5px',
-                  border: 'none',
-                  backgroundColor: idx === currentIndex ? '#C62828' : '#2a2a2a',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                }}
+                className={`h-2 md:h-[10px] rounded cursor-pointer transition-all duration-300 border-none ${
+                  idx === currentIndex ? 'w-6 md:w-8 bg-[#C62828]' : 'w-2 md:w-[10px] bg-[#2a2a2a]'
+                }`}
                 whileHover={{ backgroundColor: idx === currentIndex ? '#C62828' : '#444' }}
               />
             ))}
@@ -141,19 +123,7 @@ export default function Projects() {
 
           <motion.button
             onClick={goToNext}
-            style={{
-              width: '56px',
-              height: '56px',
-              borderRadius: '50%',
-              border: '1px solid #2a2a2a',
-              backgroundColor: '#141414',
-              color: '#EAEAEA',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '24px',
-            }}
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#2a2a2a] bg-[#141414] text-[#EAEAEA] cursor-pointer flex items-center justify-center text-xl md:text-2xl"
             whileHover={{ scale: 1.1, borderColor: '#C62828', backgroundColor: '#1a1a1a' }}
             whileTap={{ scale: 0.95 }}
           >
@@ -162,14 +132,14 @@ export default function Projects() {
         </div>
 
         {/* Project carousel */}
-        <div style={{ position: 'relative', overflow: 'hidden', minHeight: '500px' }}>
+        <div className="relative overflow-hidden min-h-[400px] md:min-h-[500px]">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.a
               key={currentIndex}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: 'block', textDecoration: 'none' }}
+              className="block no-underline"
               custom={direction}
               variants={slideVariants}
               initial="enter"
@@ -178,13 +148,7 @@ export default function Projects() {
               transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
               <motion.div
-                style={{
-                  padding: '48px',
-                  backgroundColor: '#141414',
-                  border: '1px solid #2a2a2a',
-                  borderRadius: '12px',
-                  textAlign: 'center',
-                }}
+                className="p-6 sm:p-8 md:p-12 bg-[#141414] border border-[#2a2a2a] rounded-xl text-center"
                 whileHover={{ 
                   boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
                   borderColor: '#C62828',
@@ -192,21 +156,11 @@ export default function Projects() {
                 transition={{ duration: 0.3 }}
               >
                 {/* Tech stack - centered */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '32px', justifyContent: 'center' }}>
+                <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8 justify-center">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      style={{
-                        fontSize: '11px',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.1em',
-                        padding: '8px 16px',
-                        backgroundColor: '#0B0B0B',
-                        color: 'rgba(234,234,234,0.6)',
-                        fontFamily: 'monospace',
-                        border: '1px solid #2a2a2a',
-                        borderRadius: '4px',
-                      }}
+                      className="text-[10px] md:text-[11px] uppercase tracking-wider px-3 py-2 md:px-4 md:py-2 bg-[#0B0B0B] text-[rgba(234,234,234,0.6)] font-mono border border-[#2a2a2a] rounded"
                     >
                       {t}
                     </span>
@@ -214,35 +168,35 @@ export default function Projects() {
                 </div>
 
                 {/* Title & subtitle */}
-                <h3 style={{ fontSize: '36px', fontWeight: 700, color: '#EAEAEA', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif' }}>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#EAEAEA] mb-2 font-heading">
                   {project.title}
                 </h3>
-                <p style={{ color: '#C62828', fontSize: '14px', fontWeight: 500, marginBottom: '24px' }}>
+                <p className="text-[#C62828] text-sm font-medium mb-4 md:mb-6">
                   {project.subtitle}
                 </p>
                 
                 {/* Description */}
-                <p style={{ color: 'rgba(234,234,234,0.7)', fontSize: '16px', lineHeight: 1.8, marginBottom: '40px', fontFamily: 'Lexend Deca, sans-serif' }}>
+                <p className="text-[rgba(234,234,234,0.7)] text-sm md:text-base leading-relaxed mb-6 md:mb-10 font-body">
                   {project.description}
                 </p>
 
                 {/* Features */}
-                <div style={{ paddingTop: '32px', borderTop: '1px solid #2a2a2a' }}>
-                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(234,234,234,0.4)', fontFamily: 'monospace', marginBottom: '20px' }}>
+                <div className="pt-6 md:pt-8 border-t border-[#2a2a2a]">
+                  <div className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[rgba(234,234,234,0.4)] font-mono mb-4 md:mb-5">
                     Key Features
                   </div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px 32px', justifyContent: 'center' }}>
+                  <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
                     {project.features.map((feature, idx) => (
-                      <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <span style={{ color: '#C62828' }}>→</span>
-                        <span style={{ color: 'rgba(234,234,234,0.8)', fontFamily: 'Lexend Deca, sans-serif', fontSize: '15px' }}>{feature}</span>
+                      <div key={idx} className="flex items-center gap-2">
+                        <span className="text-[#C62828]">→</span>
+                        <span className="text-[rgba(234,234,234,0.8)] font-body text-sm md:text-[15px]">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
                   {/* Link */}
-                  <div style={{ marginTop: '28px' }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'rgba(234,234,234,0.5)', fontSize: '13px', fontFamily: 'monospace' }}>
+                  <div className="mt-6 md:mt-7">
+                    <span className="inline-flex items-center gap-2 text-[rgba(234,234,234,0.5)] text-xs font-mono">
                       VIEW ON GITHUB →
                     </span>
                   </div>
@@ -253,8 +207,8 @@ export default function Projects() {
         </div>
 
         {/* Project counter text */}
-        <div style={{ textAlign: 'center', marginTop: '24px' }}>
-          <span style={{ color: 'rgba(234,234,234,0.4)', fontSize: '14px', fontFamily: 'monospace' }}>
+        <div className="text-center mt-6">
+          <span className="text-[rgba(234,234,234,0.4)] text-sm font-mono">
             {String(currentIndex + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
           </span>
         </div>

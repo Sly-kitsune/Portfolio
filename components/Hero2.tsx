@@ -5,38 +5,38 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0B0B0B', position: 'relative', overflow: 'hidden' }}>
+    <section className="min-h-screen flex items-center justify-center bg-[#0B0B0B] relative overflow-hidden px-6 py-24 md:px-12">
       {/* Parallax background elements */}
       <motion.div
-        style={{ position: 'absolute', top: '20%', right: '15%', width: '400px', height: '400px', borderRadius: '50%', backgroundColor: 'rgba(198, 40, 40, 0.08)', filter: 'blur(100px)' }}
+        className="absolute top-[20%] right-[15%] w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full bg-[rgba(198,40,40,0.08)] blur-[80px] md:blur-[100px]"
         animate={{ y: [0, -30, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        style={{ position: 'absolute', bottom: '20%', left: '10%', width: '300px', height: '300px', borderRadius: '50%', backgroundColor: 'rgba(29, 53, 87, 0.15)', filter: 'blur(80px)' }}
+        className="absolute bottom-[20%] left-[10%] w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full bg-[rgba(29,53,87,0.15)] blur-[60px] md:blur-[80px]"
         animate={{ y: [0, 20, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       {/* Two-column layout */}
-      <div style={{ width: '100%', maxWidth: '1200px', padding: '0 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '60px', flexWrap: 'wrap' }}>
+      <div className="w-full max-w-[1200px] flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16 lg:gap-20">
         
         {/* Left side - Text content */}
-        <div style={{ flex: '1', minWidth: '300px', textAlign: 'left' }}>
+        <div className="flex-1 text-center md:text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 style={{ fontSize: 'clamp(48px, 10vw, 100px)', fontWeight: 700, lineHeight: 0.95, color: '#EAEAEA', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif' }}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[100px] font-bold leading-[0.95] text-[#EAEAEA] mb-6 font-heading">
               Yashitha
               <br />
-              <span style={{ color: '#C62828' }}>Mishra</span>
+              <span className="text-[#C62828]">Mishra</span>
             </h1>
           </motion.div>
 
           <motion.p
-            style={{ fontSize: '18px', color: 'rgba(234,234,234,0.7)', lineHeight: 1.7, maxWidth: '500px', marginBottom: '40px', fontFamily: 'Lexend Deca, sans-serif' }}
+            className="text-base sm:text-lg text-[rgba(234,234,234,0.7)] leading-relaxed max-w-[500px] mb-8 md:mb-10 font-body mx-auto md:mx-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -47,31 +47,31 @@ export default function Hero() {
           
           {/* Status row */}
           <motion.div
-            style={{ display: 'flex', gap: '48px', marginBottom: '40px' }}
+            className="flex justify-center md:justify-start gap-8 sm:gap-12 mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           >
             <div>
-              <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(234,234,234,0.4)', marginBottom: '8px', fontFamily: 'monospace' }}>Location</div>
-              <div style={{ color: '#EAEAEA', fontWeight: 500, fontFamily: 'Lexend Deca, sans-serif' }}>Kochi, India</div>
+              <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[rgba(234,234,234,0.4)] mb-2 font-mono">Location</div>
+              <div className="text-[#EAEAEA] font-medium font-body text-sm sm:text-base">Kochi, India</div>
             </div>
             <div>
-              <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(234,234,234,0.4)', marginBottom: '8px', fontFamily: 'monospace' }}>Status</div>
-              <div style={{ color: '#C62828', fontWeight: 500, fontFamily: 'Lexend Deca, sans-serif' }}>Open to Work</div>
+              <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[rgba(234,234,234,0.4)] mb-2 font-mono">Status</div>
+              <div className="text-[#C62828] font-medium font-body text-sm sm:text-base">Open to Work</div>
             </div>
           </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
-            style={{ display: 'flex', gap: '20px' }}
+            className="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
             <motion.a
               href="#projects"
-              style={{ padding: '16px 40px', backgroundColor: '#C62828', color: '#EAEAEA', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '14px', textDecoration: 'none', borderRadius: '4px' }}
+              className="px-8 py-4 bg-[#C62828] text-[#EAEAEA] font-semibold uppercase tracking-wider text-sm no-underline rounded text-center"
               whileHover={{ 
                 scale: 1.05, 
                 boxShadow: '0 15px 40px rgba(198, 40, 40, 0.4)' 
@@ -82,7 +82,7 @@ export default function Hero() {
             </motion.a>
             <motion.a
               href="#contact"
-              style={{ padding: '16px 40px', border: '1px solid rgba(234,234,234,0.3)', color: '#EAEAEA', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '14px', textDecoration: 'none', borderRadius: '4px', backgroundColor: 'transparent' }}
+              className="px-8 py-4 border border-[rgba(234,234,234,0.3)] text-[#EAEAEA] font-semibold uppercase tracking-wider text-sm no-underline rounded bg-transparent text-center hover:border-[#C62828] hover:text-[#C62828] transition-colors"
               whileHover={{ borderColor: '#C62828', color: '#C62828' }}
               transition={{ duration: 0.3 }}
             >
@@ -93,20 +93,12 @@ export default function Hero() {
 
         {/* Right side - Profile Photo */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8, x: 50 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          style={{ flexShrink: 0 }}
+          className="flex-shrink-0"
         >
-          <div style={{ 
-            width: '320px', 
-            height: '320px', 
-            borderRadius: '50%', 
-            position: 'relative',
-            overflow: 'hidden',
-            border: '4px solid #C62828',
-            boxShadow: '0 0 60px rgba(198, 40, 40, 0.4)',
-          }}>
+          <div className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] rounded-full relative overflow-hidden border-4 border-[#C62828] shadow-[0_0_40px_rgba(198,40,40,0.4)] md:shadow-[0_0_60px_rgba(198,40,40,0.4)]">
             <Image
               src="/pfp.jpg"
               alt="Yashitha Mishra"
@@ -119,13 +111,13 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on mobile */}
       <motion.div
-        style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)' }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden sm:block"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <div style={{ color: 'rgba(234,234,234,0.3)', fontSize: '12px', fontFamily: 'monospace', letterSpacing: '0.3em' }}>SCROLL</div>
+        <div className="text-[rgba(234,234,234,0.3)] text-xs font-mono tracking-[0.3em]">SCROLL</div>
       </motion.div>
     </section>
   )

@@ -23,29 +23,29 @@ const skillCategories = [
 
 export default function Strategy() {
   return (
-    <section id="skills" style={{ padding: '120px 24px', backgroundColor: '#0f0f0f', display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: '100%', maxWidth: '900px' }}>
+    <section id="skills" className="py-20 md:py-32 px-6 bg-[#0f0f0f] flex justify-center">
+      <div className="w-full max-w-[900px]">
         {/* Centered header */}
         <motion.div
-          style={{ textAlign: 'center', marginBottom: '64px' }}
+          className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <span style={{ color: '#C62828', letterSpacing: '0.3em', fontSize: '12px', fontFamily: 'monospace', display: 'block', marginBottom: '24px' }}>
+          <span className="text-[#C62828] tracking-[0.3em] text-xs font-mono block mb-6">
             EXPERTISE
           </span>
-          <h2 style={{ fontSize: 'clamp(40px, 8vw, 72px)', fontWeight: 700, color: '#EAEAEA', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#EAEAEA] mb-6 font-heading">
             Technical Stack
           </h2>
-          <p style={{ color: 'rgba(234,234,234,0.5)', fontSize: '18px', margin: '0 auto', fontFamily: 'Lexend Deca, sans-serif' }}>
+          <p className="text-[rgba(234,234,234,0.5)] text-base md:text-lg mx-auto font-body max-w-xl">
             Building quantitative systems, AI automation, and production-grade applications across the full stack.
           </p>
         </motion.div>
 
         {/* Skills grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {skillCategories.map((category, i) => (
             <motion.div
               key={category.title}
@@ -55,14 +55,7 @@ export default function Strategy() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
             >
               <motion.div
-                style={{
-                  padding: '40px 24px',
-                  backgroundColor: '#141414',
-                  border: '1px solid #2a2a2a',
-                  borderRadius: '12px',
-                  height: '100%',
-                  textAlign: 'center',
-                }}
+                className="p-6 md:p-10 bg-[#141414] border border-[#2a2a2a] rounded-xl h-full text-center"
                 whileHover={{ 
                   y: -5,
                   borderColor: '#C62828',
@@ -70,14 +63,14 @@ export default function Strategy() {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 style={{ color: '#C62828', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', fontFamily: 'monospace', marginBottom: '28px' }}>
+                <h3 className="text-[#C62828] text-[10px] md:text-xs uppercase tracking-[0.2em] font-mono mb-5 md:mb-7">
                   {category.title}
                 </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <ul className="list-none p-0 m-0 flex flex-col gap-3 md:gap-4">
                   {category.skills.map((skill) => (
                     <li 
                       key={skill} 
-                      style={{ color: 'rgba(234,234,234,0.8)', fontSize: '15px', fontFamily: 'Lexend Deca, sans-serif' }}
+                      className="text-[rgba(234,234,234,0.8)] text-sm md:text-[15px] font-body"
                     >
                       {skill}
                     </li>

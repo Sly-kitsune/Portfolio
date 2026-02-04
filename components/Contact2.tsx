@@ -4,30 +4,30 @@ import { motion } from 'framer-motion'
 
 export default function Contact() {
   return (
-    <section id="contact" style={{ padding: '120px 24px', backgroundColor: '#0B0B0B', display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: '100%', maxWidth: '900px' }}>
+    <section id="contact" className="py-20 md:py-32 px-6 bg-[#0B0B0B] flex justify-center">
+      <div className="w-full max-w-[900px]">
         {/* Centered header */}
         <motion.div
-          style={{ textAlign: 'center', marginBottom: '64px' }}
+          className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <span style={{ color: '#C62828', letterSpacing: '0.3em', fontSize: '12px', fontFamily: 'monospace', display: 'block', marginBottom: '24px' }}>
+          <span className="text-[#C62828] tracking-[0.3em] text-xs font-mono block mb-6">
             CONTACT
           </span>
-          <h2 style={{ fontSize: 'clamp(36px, 7vw, 64px)', fontWeight: 700, color: '#EAEAEA', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#EAEAEA] mb-6 font-heading">
             Let's Connect
           </h2>
-          <p style={{ color: 'rgba(234,234,234,0.5)', fontSize: '18px', margin: '0 auto', fontFamily: 'Lexend Deca, sans-serif' }}>
+          <p className="text-[rgba(234,234,234,0.5)] text-base md:text-lg mx-auto font-body">
             Available for full-time roles, consulting, and technical partnerships.
           </p>
         </motion.div>
 
         {/* Contact cards */}
         <motion.div
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -35,15 +35,7 @@ export default function Contact() {
         >
           <motion.a
             href="mailto:lerandomnomad@gmail.com"
-            style={{
-              display: 'block',
-              padding: '40px 24px',
-              backgroundColor: '#141414',
-              border: '1px solid #2a2a2a',
-              borderRadius: '12px',
-              textAlign: 'center',
-              textDecoration: 'none',
-            }}
+            className="block p-6 md:p-10 bg-[#141414] border border-[#2a2a2a] rounded-xl text-center no-underline"
             whileHover={{ 
               y: -5,
               borderColor: '#C62828',
@@ -51,10 +43,10 @@ export default function Contact() {
             }}
             transition={{ duration: 0.3 }}
           >
-            <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(234,234,234,0.4)', fontFamily: 'monospace', marginBottom: '16px' }}>
+            <div className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[rgba(234,234,234,0.4)] font-mono mb-3 md:mb-4">
               Email
             </div>
-            <div style={{ color: '#EAEAEA', fontFamily: 'Lexend Deca, sans-serif', fontSize: '15px' }}>
+            <div className="text-[#EAEAEA] font-body text-sm md:text-[15px] break-all">
               lerandomnomad@gmail.com
             </div>
           </motion.a>
@@ -63,15 +55,7 @@ export default function Contact() {
             href="https://github.com/Sly-kitsune"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'block',
-              padding: '40px 24px',
-              backgroundColor: '#141414',
-              border: '1px solid #2a2a2a',
-              borderRadius: '12px',
-              textAlign: 'center',
-              textDecoration: 'none',
-            }}
+            className="block p-6 md:p-10 bg-[#141414] border border-[#2a2a2a] rounded-xl text-center no-underline"
             whileHover={{ 
               y: -5,
               borderColor: '#C62828',
@@ -79,10 +63,10 @@ export default function Contact() {
             }}
             transition={{ duration: 0.3 }}
           >
-            <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(234,234,234,0.4)', fontFamily: 'monospace', marginBottom: '16px' }}>
+            <div className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[rgba(234,234,234,0.4)] font-mono mb-3 md:mb-4">
               GitHub
             </div>
-            <div style={{ color: '#EAEAEA', fontFamily: 'Lexend Deca, sans-serif', fontSize: '15px' }}>
+            <div className="text-[#EAEAEA] font-body text-sm md:text-[15px]">
               Sly-kitsune
             </div>
           </motion.a>
@@ -91,15 +75,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/yashitha-m-0320355b/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'block',
-              padding: '40px 24px',
-              backgroundColor: '#141414',
-              border: '1px solid #2a2a2a',
-              borderRadius: '12px',
-              textAlign: 'center',
-              textDecoration: 'none',
-            }}
+            className="block p-6 md:p-10 bg-[#141414] border border-[#2a2a2a] rounded-xl text-center no-underline"
             whileHover={{ 
               y: -5,
               borderColor: '#C62828',
@@ -107,10 +83,10 @@ export default function Contact() {
             }}
             transition={{ duration: 0.3 }}
           >
-            <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(234,234,234,0.4)', fontFamily: 'monospace', marginBottom: '16px' }}>
+            <div className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[rgba(234,234,234,0.4)] font-mono mb-3 md:mb-4">
               LinkedIn
             </div>
-            <div style={{ color: '#EAEAEA', fontFamily: 'Lexend Deca, sans-serif', fontSize: '15px' }}>
+            <div className="text-[#EAEAEA] font-body text-sm md:text-[15px]">
               Yashitha Mishra
             </div>
           </motion.a>
@@ -118,25 +94,16 @@ export default function Contact() {
 
         {/* Footer */}
         <motion.div
-          style={{ 
-            marginTop: '80px', 
-            paddingTop: '32px', 
-            borderTop: '1px solid #2a2a2a',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '16px'
-          }}
+          className="mt-16 md:mt-20 pt-8 border-t border-[#2a2a2a] flex flex-col sm:flex-row justify-between items-center gap-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <p style={{ color: 'rgba(234,234,234,0.3)', fontSize: '12px', fontFamily: 'monospace', letterSpacing: '0.2em' }}>
+          <p className="text-[rgba(234,234,234,0.3)] text-xs font-mono tracking-[0.2em]">
             © 2026 YASHITHA MISHRA
           </p>
-          <p style={{ color: 'rgba(234,234,234,0.3)', fontSize: '12px', fontFamily: 'monospace', letterSpacing: '0.2em' }}>
+          <p className="text-[rgba(234,234,234,0.3)] text-xs font-mono tracking-[0.2em]">
             KOCHI, INDIA
           </p>
         </motion.div>
