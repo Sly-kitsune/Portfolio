@@ -2,8 +2,6 @@
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Framer Motion.
 
-![Portfolio Preview](public/pfp.jpg)
-
 ## 🚀 Live Demo
 
 [View Live Site](https://your-site.vercel.app)
