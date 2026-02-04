@@ -80,7 +80,7 @@ This project is optimized for deployment on [Vercel](https://vercel.com):
 
 ## 📧 Contact
 
-- **Email:** yashithamishrawork@gmail.com
+- **Email:** lerandomnomad@gmail.com
 - **GitHub:** [Sly-kitsune](https://github.com/Sly-kitsune)
 - **LinkedIn:** [Yashitha Mishra](https://linkedin.com/in/yashitha-mishra)
 
