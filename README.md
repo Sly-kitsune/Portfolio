@@ -1,4 +1,4 @@
-# Portfolio Website
+# Portfolio Website (update in progress)
 
 A modern, minimalist portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
