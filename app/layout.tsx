@@ -1,12 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import '@/app/globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Yashitha Mishra | Quantitative Engineer & Developer',
-  description: 'Portfolio of Yashitha Mishra - Quant Trader, Python Developer, and Open Source Contributor',
+  title: 'Your Name - Portfolio',
+  description: 'Quantitative engineer building trading systems and AI applications',
 }
 
 export default function RootLayout({
@@ -15,13 +12,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet" />
-      </head>
-      <body className={`${inter.className} overflow-x-hidden`} style={{ backgroundColor: '#3F5A62', color: '#FE8254' }}>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   )
 }
