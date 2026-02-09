@@ -1,33 +1,59 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 
 export default function AnimatedCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 })
+  const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
+    const updatePosition = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY })
+      setTimeout(() => {
+        setFollowerPosition({ x: e.clientX, y: e.clientY })
+      }, 80)
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
-    
-    document.body.style.cursor = 'none'
+    const handleMouseEnter = () => setIsHovering(true)
+    const handleMouseLeave = () => setIsHovering(false)
+
+    window.addEventListener('mousemove', updatePosition)
+
+    const interactiveElements = document.querySelectorAll('a, button')
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', handleMouseEnter)
+      el.addEventListener('mouseleave', handleMouseLeave)
+    })
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      document.body.style.cursor = 'auto'
+      window.removeEventListener('mousemove', updatePosition)
+      interactiveElements.forEach(el => {
+        el.removeEventListener('mouseenter', handleMouseEnter)
+        el.removeEventListener('mouseleave', handleMouseLeave)
+      })
     }
   }, [])
 
   return (
-    <motion.div
-      className="fixed pointer-events-none z-[9999]"
-      animate={{ x: mousePosition.x, y: mousePosition.y }}
-      transition={{ duration: 0, type: 'tween' }}
-    >
-      <div className="w-3 h-3 -ml-1.5 -mt-1.5 bg-[#C62828] rounded-full mix-blend-difference" />
-    </motion.div>
+    <>
+      <div 
+        className="hidden md:block fixed w-3 h-3 bg-burgundy rounded-full pointer-events-none z-[10000] mix-blend-difference"
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+          transform: 'translate(-50%, -50%)',
+          transition: 'all 0.1s ease'
+        }}
+      />
+      <div 
+        className={`hidden md:block fixed border border-burgundy rounded-full pointer-events-none z-[9999] transition-all duration-150 ${isHovering ? 'w-16 h-16 bg-burgundy/10' : 'w-8 h-8'}`}
+        style={{
+          left: `${followerPosition.x}px`,
+          top: `${followerPosition.y}px`,
+          transform: 'translate(-50%, -50%)'
+        }}
+      />
+    </>
   )
 }
