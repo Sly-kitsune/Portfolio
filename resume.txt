@@ -1,0 +1,112 @@
+YASHITHA MISHRA 
+https://github.com/Sly-kitsune  
+Kochi, India.  
+lerandomnomad@gmail.com 
++91 9074284505  
+Professional Summary 
+Quantitative Trader and Python Developer with hands-on experience designing, coding, and 
+deploying automated trading strategies for crypto and equities markets. Strong background in 
+data analysis, risk management, and performance optimization. Adept at building and 
+backtesting trading bots, extracting actionable insights from large datasets, and thriving in 
+fast-paced, collaborative environments. 
+Technical Skills  
+●  Python (algorithmic trading, data analysis, backtesting)  
+● Trading bot development (Binance, Delta Exchange)  
+●  Data analysis & visualization (Pandas, NumPy, Matplotlib)  
+● Risk management & performance tracking  
+● API integration & troubleshooting  
+● Market data extraction & signal automation  
+● Swift 
+● HTML 
+● JavaScript 
+● CSS 
+● Shell 
+● Dockerfile 
+● Procile 
+Projects  
+Automated Trading Systems (Binance, Delta Exchange) 
+● Designed and deployed automated trading bots for crypto spot and derivatives markets. 
+● Implemented strategy execution, order lifecycle management, risk controls, and exchange 
+API integration. 
+● Maintained structured logging for trades, positions, and performance metrics. 
+Crypto Portfolio Allocation System (CPAS) – Binance 
+● Developed modular portfolio allocation and analytics platform using Binance APIs. 
+● Built pipelines for data extraction, cleaning, normalization, and storage. 
+● Implemented portfolio tracking and automated rebalancing. 
+● Open-source: CPAS‑Binance (GitHub) 
+Chiron Wound Inversion Oracle (Go / Web) 
+● Built a minimal, global-ready web app calculating natal Chiron placements and reframing 
+“wounds” as Left-Hand Path strengths. 
+● Single Go 1.22 binary (~8MB), zero external dependencies, cross-platform, low memory, 
+optional Cloudflare Worker for edge deployment. 
+● Modern responsive frontend with dark theme, animations, validation, and timezone 
+support. 
+● REST JSON API with CORS; complete mapping of 12 signs × 12 houses (144 
+interpretations). 
+Lilith: The Shadow Cycle Tracker (Swift / Vapor 4) 
+● Developed a server-side Swift API and iOS frontend tracking menstrual cycles 
+synchronized with lunar phases, delivering daily Left-Hand Path ritual forecasts. 
+● Built a high-precision calculation pipeline with Swiss Ephemeris and Vapor 4 backend, 
+packaged in Docker for reproducible deployment. 
+● Designed REST API (POST /calculate) generating cycle phases, lunar phases, and 
+ritual instructions programmatically. 
+● iOS frontend references backend data, supporting visualization and ritual guidance. 
+● Emphasized modularity, testing, and accurate time-zone handling for global usage. 
+● Open-source: Lilith-Blood-Moon-Tracker (GitHub) 
+Custom Analytics & Tracking Tools 
+● Developed tools for structured data capture, aggregation, and pattern analysis across 
+financial and temporal datasets. 
+● Standardized logging, metrics extraction, and reproducible workflows. 
+Professional Experience 
+Independent Quantitative Trader & Developer Remote | Feb 2022 – Present 
+● Executed and monitored trades in crypto and equities markets, focusing on automation, 
+risk controls, and performance analytics. 
+●  Built and optimized Python-based trading bots for Binance and Delta Exchange, 
+integrating with APIs and maintaining detailed trade logs.  
+●  Conducted portfolio rebalancing, cash monitoring, and risk management for personal 
+and client accounts.  
+●  Maintained accurate records of transactions and performance, supporting compliance 
+and reporting. 
+Freelancer (Technical & Analytical Projects) Remote | Dec 2021 – Present 
+●  Delivered technical and analytical solutions for international clients, including data 
+extraction, trade reporting, and workflow automation.  
+●  Supported client onboarding and maintained CRM records for multiple projects.  
+Teachers Relationship Manager Learnmall, Bangalore | Mar 2021 – May 2021 
+● Built and maintained professional client relationships, supporting business growth 
+and accurate data management.  
+Senior Fulfillment Expert Swiggy, Bangalore | Oct 2019 – Apr 2021  
+● Managed customer issues and escalations, ensuring operational accuracy and high 
+satisfaction.  
+●  Handled sensitive transactions and maintained detailed records. 
+Tech Mahindra Business Service Ltd, Pune, Maharashtra. Customer Relations 
+Advisor | Apr 2017 - May 2018 
+● The first line of sales.  
+● Resolved tech issues for the network connections via call and helpdesk. 
+● Handled and maintained a good relationship with the customers and the company. 
+WNS, Pune, Maharashtra Associate operations. July 2016 - Dec 2016 
+● Handled and helped customers to claim loans via calls, help desk, and emails. 
+● Resolved any concerns that were raised by customers. 
+Education   
+●  Bachelor of Arts (Economics) Indira Gandhi National Open University | Jan 2017 – Jul 2021  
+● Data Analytics Essentials Cisco Networking Academy | Jul 2023 – Aug 2023  
+●  CS50’s Computer Science for Business Professionals Harvard University (Online) 
+| Jan 2023 – May 2023  
+●  Entrepreneurship in Emerging Economics Harvard University (Online) | Jun 2023 – Dec 2023  
+●  High-Dimensional Data Analysis Harvard Business School Online | Jul 2023 – 
+Jan 2024  
+●  Advanced International Business Saylor Academy | Aug 2023 – Present  
+●  Advanced Data Analytics Certificate Google | May 2021 – Aug 2021  
+●  Quantitative and Qualitative Research in Finance The Open University | Nov 
+2024  
+●  High School (Business/Commerce) Toc H Public School | 2014 – 2016 
+Languages   
+● English (Fluent)  
+●  French (Basic)  
+●  Hindi (Fluent)  
+●  Malayalam (Fluent)  
+●  Kannada (Conversational)  
+●  Marathi (Conversational)  
+● Arabic (Basic) 
+● Spanish (Basic) 
+● German (Basic) 
+● Chinese Mandarin (Basic)
