@@ -1,0 +1,50 @@
+YASHITHA MISHRA 
+Quantitative Engineer | Algorithmic Trader | Systems Developer 
+Kochi, India | +91 9074284505 | lerandomnomad@gmail.com 
+GitHub: https://github.com/Sly-kitsune 
+SUMMARY 
+Quantitative engineer designing automated trading and analytics systems across crypto and 
+equities. 
+Expert in Python strategy execution, market data pipelines, API integration, and risk controls. 
+Delivered production-ready bots, portfolio allocators, and backend services with measurable 
+performance gains. 
+CORE SKILLS 
+● Python (algorithmic trading, backtesting, data pipelines) 
+● Quantitative trading systems (crypto spot & derivatives) 
+● Pandas, NumPy, Matplotlib 
+● Strategy execution, order lifecycle, risk management 
+● Market data ingestion & signal automation 
+● REST APIs, exchange integrations (Binance, Delta Exchange) 
+● Docker, Linux shell, reproducible deployments 
+● Go (backend services), Swift (API + iOS) 
+● HTML, CSS, JavaScript 
+EXPERIENCE 
+Independent Quantitative Trader & Engineer — Remote | Feb 2022–Present 
+● Deployed Python trading bots executing strategies with automated risk controls, 
+monitoring, and PnL tracking. 
+● Built market data pipelines and structured logging, enabling real-time performance 
+metrics and portfolio analysis. 
+● Automated portfolio rebalancing and exposure limits, reducing manual intervention and 
+drawdowns. 
+Freelance Quant & Systems Developer — Remote | Dec 2021–Present 
+● Delivered analytics automation, data extraction, and reporting pipelines for international 
+clients. 
+● Streamlined workflows, cutting manual processing and improving data accuracy. 
+PROJECTS 
+Automated Trading Systems — Binance & Delta 
+● Engineered end-to-end bots with signal generation, execution, risk controls, and 
+logging. 
+Crypto Portfolio Allocation System (CPAS) 
+● Modular portfolio engine automating rebalancing and analytics via Binance APIs. 
+● Open source: CPAS-Binance (GitHub) 
+Chiron Oracle — Go / Web 
+● Single-binary backend (~8MB) with REST API; cross-platform, timezone-safe, minimal 
+dependencies. 
+Lilith Shadow Cycle Tracker — Swift / Vapor 
+● Server-side API computing high-precision astronomical cycles; Dockerized for 
+reproducible deployment. 
+EDUCATION 
+● B.A. Economics — Indira Gandhi National Open University 
+● Advanced Data Analytics — Google 
+● CS50: Computer Science for Business Professionals — Harvard University 
+● High-Dimensional Data Analysis — Harvard Business School Online
