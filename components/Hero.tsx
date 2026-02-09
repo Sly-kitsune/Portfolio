@@ -11,7 +11,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
       >
         <h1 className="font-montserrat text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
-          Your Name
+          Yashitha Mishra
         </h1>
         <p className="text-lg text-gray-400 mb-10 leading-relaxed max-w-lg">
           Quantitative engineer building trading systems, AI agents, and full-stack applications. 
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="flex gap-16 mb-10">
           <div>
             <div className="text-xs uppercase tracking-wider text-gray-400 mb-1">Location</div>
-            <div className="text-white">Your City, Country</div>
+            <div className="text-white">Kochi, India</div>
           </div>
           <div>
             <div className="text-xs uppercase tracking-wider text-gray-400 mb-1">Status</div>
