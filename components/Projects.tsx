@@ -1,106 +1,148 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const projects = [
   {
+    tags: ['Python', 'Transformers', 'NLP', 'Crypto APIs'],
     title: 'Sentiment-Bot',
-    description: 'Real-time crypto sentiment analysis with fine-tuned NLP models',
-    link: 'https://github.com/Sly-kitsune/Sentiment-Bot'
+    subtitle: 'Real-time Crypto Sentiment Analysis',
+    description: 'NLP-powered trading signal system analyzing social media and news sentiment for cryptocurrency markets.',
+    features: [
+      'Real-time sentiment scoring',
+      'Multi-source data aggregation',
+      'Signal generation pipeline'
+    ],
+    link: '#',
+    number: '01'
   },
   {
-    title: 'Jobaru LLM Job Agent',
-    description: 'Autonomous AI job application agent running locally on Ollama',
-    link: 'https://github.com/Sly-kitsune/jobaru-llm-job-agent'
+    tags: ['React', 'TypeScript', 'Next.js'],
+    title: 'Project Two',
+    subtitle: 'Modern Web Application',
+    description: 'Full-stack web application with modern architecture and seamless user experience.',
+    features: [
+      'Server-side rendering',
+      'Type-safe development',
+      'Optimized performance'
+    ],
+    link: '#',
+    number: '02'
   },
   {
-    title: 'Lilith: Shadow Cycle Tracker',
-    description: 'Menstrual cycle tracker synced with lunar phases. Built with Swift & Vapor.',
-    link: 'https://github.com/Sly-kitsune/Lilith-Blood-Moon-Tracker'
+    tags: ['FastAPI', 'PostgreSQL', 'Docker'],
+    title: 'API Platform',
+    subtitle: 'High-Performance Backend System',
+    description: 'Scalable API platform with advanced features and robust architecture.',
+    features: [
+      'RESTful API design',
+      'Database optimization',
+      'Containerized deployment'
+    ],
+    link: '#',
+    number: '03'
   },
   {
-    title: 'Chiron Oracle',
-    description: 'Natal Chiron calculator. Single Go binary, zero dependencies.',
-    link: 'https://github.com/Sly-kitsune/chiron-oracle',
-    tags: ['Go', 'Astronomy', 'CLI'],
-    color: 'from-yellow-500 to-orange-500'
-  },
+    tags: ['PyTorch', 'ML', 'AI'],
+    title: 'AI Model',
+    subtitle: 'Machine Learning Pipeline',
+    description: 'End-to-end ML pipeline for predictive modeling and data analysis.',
+    features: [
+      'Custom model architecture',
+      'Training optimization',
+      'Production deployment'
+    ],
+    link: '#',
+    number: '04'
+  }
 ]
 
 export default function Projects() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.1 },
-    },
+  const next = () => {
+    if (currentIndex < projects.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+    }
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' as const },
-    },
+  const prev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1)
+    }
   }
+
+  const current = projects[currentIndex]
 
   return (
-    <section id="projects" className="py-32 px-6 md:px-12 border-t border-primary/20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-16"
+    <section className="py-32 px-8 md:px-16" id="projects">
+      <div className="text-xs uppercase tracking-wider text-gray-400 mb-4">PORTFOLIO</div>
+      <h2 className="font-montserrat text-5xl md:text-6xl font-black mb-6 tracking-tight">Selected Work</h2>
+      <p className="text-gray-400 max-w-2xl mb-20">
+        Trading systems, AI automation, and full-stack applications built for performance and scale.
+      </p>
+
+      <div className="flex gap-4 mb-10">
+        <button
+          onClick={prev}
+          disabled={currentIndex === 0}
+          className="w-14 h-14 border border-gray-600 hover:border-burgundy hover:bg-burgundy transition-all disabled:opacity-30 disabled:cursor-not-allowed text-xl"
         >
-          <motion.h2 variants={itemVariants} className="text-5xl md:text-6xl font-bold sticky top-32 font-heading text-primary">
-            Projects
-          </motion.h2>
-
-          <motion.div variants={itemVariants} className="md:col-span-3 space-y-12">
-            {projects.map((project, idx) => (
-              <motion.a
-                key={idx}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={itemVariants}
-                className="group block"
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <motion.div
-                  className="relative border-b border-primary/20 pb-8 overflow-hidden"
-                  whileHover={{ paddingBottom: 32 }}
-                >
-                  <motion.h3
-                    className="text-3xl font-bold mb-4 text-primary group-hover:text-primary transition-colors"
-                    whileHover={{ x: 10 }}
-                  >
-                    {project.title}
-                  </motion.h3>
-
-                  <p className="text-primary/85 text-lg leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-
-                  <motion.p
-                    className="text-primary text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity"
-                    animate={{ x: hoveredIndex === idx ? 8 : 0 }}
-                  >
-                    View Project →
-                  </motion.p>
-                </motion.div>
-              </motion.a>
-            ))}
-          </motion.div>
-        </motion.div>
+          ←
+        </button>
+        <button
+          onClick={next}
+          disabled={currentIndex === projects.length - 1}
+          className="w-14 h-14 border border-gray-600 hover:border-burgundy hover:bg-burgundy transition-all disabled:opacity-30 disabled:cursor-not-allowed text-xl"
+        >
+          →
+        </button>
       </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
+          className="bg-midnight-black border border-white/5 p-12 md:p-16 grid md:grid-cols-2 gap-20"
+        >
+          <div>
+            <div className="flex flex-wrap gap-3 mb-8">
+              {current.tags.map((tag, i) => (
+                <span key={i} className="px-4 py-2 border border-burgundy text-burgundy text-xs uppercase tracking-wide">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            
+            <h3 className="font-montserrat text-4xl md:text-5xl font-black mb-4 tracking-tight">{current.title}</h3>
+            <p className="text-gray-400 mb-8">{current.subtitle}</p>
+            <p className="text-gray-400 mb-8">{current.description}</p>
+
+            <ul className="mb-10">
+              {current.features.map((feature, i) => (
+                <li key={i} className="py-3 border-b border-white/5 text-gray-400 text-sm">
+                  <span className="text-burgundy font-bold mr-4">→</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <a href={current.link} className="text-white text-xs uppercase tracking-widest hover:text-burgundy transition-colors inline-flex items-center gap-2">
+              VIEW ON GITHUB →
+            </a>
+          </div>
+
+          <div className="flex items-end justify-end">
+            <div className="font-montserrat text-8xl font-black text-white/5">
+              {current.number} / 04
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </section>
   )
 }
