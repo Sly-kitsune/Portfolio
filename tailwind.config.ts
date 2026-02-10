@@ -1,23 +1,26 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        burgundy: '#800020',
-        'midnight-black': '#1C1C1C',
+        background: '#0a0a0a',
+        text: '#ffffff',
+        accent: '#800020',
+        muted: '#888',
+        card: '#1a1a1a',
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        lexend: ['Lexend Deca', 'sans-serif'],
+        sans: ['Arial', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
-}
-export default config
+};
