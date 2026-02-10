@@ -1,29 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Lexend+Deca:wght@300;400;500&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #800020;
-  color: #ffffff;
-  font-family: 'Lexend Deca', sans-serif;
-  cursor: none;
-  overflow-x: hidden;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-  body {
-    cursor: auto;
-  }
-}
+theme: {
+  extend: {
+    colors: {
+      background: '#0a0a0a',
+      text: '#ffffff',
+      accent: '#800020',
+      muted: '#888',
+      card: '#1a1a1a',
+    },
+    fontFamily: {
+      sans: ['Arial', 'sans-serif'],
+    },
+  },
+},
