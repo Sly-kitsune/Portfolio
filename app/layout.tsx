@@ -1,19 +1,25 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import './globals.css';
+import Cursor from '@/components/Cursor'; // Adjust path if needed
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Your Name - Portfolio',
-  description: 'Quantitative engineer building trading systems and AI applications',
-}
+  title: 'Your Portfolio',
+  description: 'Yashitha Mishra - Quant Developer',
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Cursor />
+        <Navbar />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
