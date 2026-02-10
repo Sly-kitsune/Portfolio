@@ -1,64 +1,20 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen grid md:grid-cols-2 gap-20 items-center px-8 md:px-16 pt-32 md:pt-0 bg-[#800020]" id="home">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h1 className="font-montserrat text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight text-white">
-          Your Name
-        </h1>
-        <p className="text-lg text-gray-300 mb-10 leading-relaxed max-w-lg">
-          Quantitative engineer building trading systems, AI agents, and full-stack applications. 
-          Focused on automation, predictive modeling, and clean system architecture.
-        </p>
-
-        <div className="flex gap-16 mb-10">
-          <div>
-            <div className="text-xs uppercase tracking-wider text-gray-300 mb-1">Location</div>
-            <div className="text-white">Your City, Country</div>
-          </div>
-          <div>
-            <div className="text-xs uppercase tracking-wider text-gray-300 mb-1">Status</div>
-            <div className="text-white">Open to Work</div>
-          </div>
-        </div>
-
-        <div className="flex gap-5">
-          <a 
-            href="#projects" 
-            className="px-9 py-4 text-xs uppercase tracking-widest border-2 border-[#1C1C1C] bg-[#1C1C1C] text-white hover:bg-transparent hover:text-[#1C1C1C] transition-all"
-          >
-            View Work
-          </a>
-          <a 
-            href="#contact" 
-            className="px-9 py-4 text-xs uppercase tracking-widest border-2 border-[#1C1C1C] text-[#1C1C1C] hover:bg-[#1C1C1C] hover:text-white transition-all"
-          >
-            Contact
-          </a>
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="hidden md:block w-full h-[600px] bg-[#1C1C1C] rounded"
-      >
-        {/* Add your image here */}
-        {/* <img src="/pfp.jpg" alt="Profile" className="w-full h-full object-cover rounded" /> */}
-      </motion.div>
-
-      <div className="absolute bottom-12 left-8 md:left-16 flex items-center gap-4 text-xs uppercase tracking-wider text-gray-300">
-        <div className="w-8 h-px bg-gray-400"></div>
-        SCROLL
+    <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden">
+      <div className="absolute w-full h-full z-0 overflow-hidden">
+        <motion.div className="circle absolute rounded-full bg-gradient-radial from-[rgba(128,0,32,0.1)] to-transparent w-[300px] h-[300px] top-[10%] left-[10%]" animate={{ y: [0, 50, 0], scale: [1, 1.1, 1] }} transition={{ duration: 20, repeat: Infinity }} />
+        <motion.div className="circle absolute rounded-full bg-gradient-radial from-[rgba(128,0,32,0.1)] to-transparent w-[200px] h-[200px] top-[60%] right-[20%]" animate={{ y: [0, 50, 0], scale: [1, 1.1, 1] }} transition={{ duration: 20, repeat: Infinity, delay: 5 }} />
+        <motion.div className="circle absolute rounded-full bg-gradient-radial from-[rgba(128,0,32,0.1)] to-transparent w-[400px] h-[400px] bottom-[10%] left-[50%]" animate={{ y: [0, 50, 0], scale: [1, 1.1, 1] }} transition={{ duration: 20, repeat: Infinity, delay: 10 }} />
+      </div>
+      <div className="text-center z-10">
+        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="text-8xl font-black tracking-tighter">Yashitha <span className="text-accent">Mishra</span><br />Quant Developer</motion.h1> {/* Customize from resume */}
+        <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="text-xl text-muted tracking-widest uppercase">Building AI-Driven Trading Systems</motion.p>
+        <motion.button initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.4 }} className="mt-10 px-10 py-4 border-2 border-accent text-text uppercase tracking-widest relative overflow-hidden hover:bg-accent transition-all">
+          Explore Projects
+        </motion.button>
       </div>
     </section>
-  )
+  );
 }
