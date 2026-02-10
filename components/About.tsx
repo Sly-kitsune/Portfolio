@@ -1,52 +1,17 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
 export default function About() {
   return (
-    <section id="about" className="py-20 px-6 md:px-12 border-t border-primary/20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 items-start">
-          <h2 className="text-5xl md:text-6xl font-bold sticky top-32 font-heading text-primary">About</h2>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="md:col-span-3 space-y-16"
-          >
-            <div>
-              <h3 className="text-3xl font-bold text-primary mb-6">Quantitative Engineer</h3>
-              <p className="text-primary/85 text-lg leading-relaxed">
-                Trading bot architect with expertise in Python strategy execution, market data pipelines, and risk management. Delivered production-ready systems for crypto and equities trading with measurable performance gains.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-8 pt-8">
-              <motion.div whileHover={{ x: 5, scale: 1.05 }}>
-                <p className="text-primary/60 text-xs uppercase tracking-widest mb-2">Location</p>
-                <p className="text-primary font-semibold text-lg">Kochi, India</p>
-              </motion.div>
-              <motion.div whileHover={{ x: 5, scale: 1.05 }}>
-                <p className="text-primary/60 text-xs uppercase tracking-widest mb-2">Status</p>
-                <p className="text-primary font-semibold text-lg">Open to Work</p>
-              </motion.div>
-              <motion.div whileHover={{ x: 5, scale: 1.05 }}>
-                <p className="text-primary/60 text-xs uppercase tracking-widest mb-2">Email</p>
-                <a href="mailto:lerandomnomad@gmail.com" className="text-primary font-semibold hover:underline">
-                  lerandomnomad@gmail.com
-                </a>
-              </motion.div>
-              <motion.div whileHover={{ x: 5, scale: 1.05 }}>
-                <p className="text-primary/60 text-xs uppercase tracking-widest mb-2">GitHub</p>
-                <a href="https://github.com/Sly-kitsune" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">
-                  Sly-kitsune
-                </a>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+    <section id="about" className="py-[150px] px-[60px] grid grid-cols-1 md:grid-cols-2 gap-[100px] items-center">
+      <div className="about-text">
+        <h2 className="text-[60px] mb-[30px] tracking-[-1px]">About Me</h2>
+        <p className="text-[18px] leading-[1.8] text-muted mb-[20px]">
+          Experienced in designing automated trading strategies for crypto/equities, data analysis, risk management, and bot development. Thrives in fast-paced settings.
+        </p>
+        <p className="text-[18px] leading-[1.8] text-muted mb-[20px]">
+          BA in Economics (IGNOU, 2017–2021); Certifications in Data Analytics, CS for Business, and more from Harvard, Google, Cisco.
+        </p>
+        {/* Add more from resume */}
       </div>
+      <div className="about-image w-full h-[500px] bg-gradient-to-br from-accent to-background rounded-[10px] relative overflow-hidden hover:before:left-[100%] before:content-[''] before:absolute before:top-0 before:left-[-100%] before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-[rgba(255,255,255,0.1)] before:to-transparent before:transition-left before:duration-500" />
     </section>
-  )
+  );
 }
